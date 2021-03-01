@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import API from "./utils/API";
+import React, { useState, useEffect } from "react";
+
+import EmployeeTable from "./components/table";
+import DataGridDemo from "./components/table copy";
+import { Tab } from "@material-ui/core";
 
 function App() {
+  const [employees, setEmployees] = useState([]);
+
+  useEffect(() => {
+    loadEmployees();
+  }, []);
+
+  function loadEmployees() {
+    API.getEmployees()
+      .then((res) => {
+        setEmployees(res.data.results);
+        console.log(res.data.results);
+      })
+      .catch((err) => console.log(err));
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Employee List:</h1>
+      <EmployeeTable employees={employees} />
     </div>
   );
 }
