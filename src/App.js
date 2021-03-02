@@ -1,9 +1,6 @@
 import API from "./utils/API";
 import React, { useState, useEffect } from "react";
-
-import EmployeeTable from "./components/table";
-import DataGridDemo from "./components/table copy";
-import { Tab } from "@material-ui/core";
+import EmplTable from "./components/table";
 
 function App() {
   const [employees, setEmployees] = useState([]);
@@ -23,8 +20,8 @@ function App() {
 
   return (
     <div>
-      <h1>Employee List:</h1>
-      <EmployeeTable employees={employees} />
+      <h2>Employee Table:</h2>
+      <EmplTable employees={employees} />
     </div>
   );
 }
