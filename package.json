@@ -2,6 +2,7 @@
   "name": "app_empl_directory",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://langjeff.github.io/app_empl_directory/",
   "dependencies": {
     "@material-ui/core": "^4.11.3",
     "@material-ui/data-grid": "^4.0.0-alpha.21",
@@ -15,8 +16,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.3",
-    "web-vitals": "^1.1.0",
-    "homepage": "https://langjeff.github.io/app_empl_directory/"
+    "web-vitals": "^1.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
