@@ -16,7 +16,7 @@
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.0",
-    "homepage": "http://langjeff.github.io/app_empl_directory"
+    "homepage": "https://langjeff.github.io/app_empl_directory/"
   },
   "scripts": {
     "start": "react-scripts start",
